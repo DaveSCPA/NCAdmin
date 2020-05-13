@@ -28,6 +28,7 @@
     "draft-js": "^0.11.4",
     "draftjs-to-html": "^0.9.1",
     "firebase": "^7.6.1",
+    "formik": "^2.1.4",
     "history": "^4.10.1",
     "isomorphic-fetch": "^2.2.1",
     "jss-rtl": "^0.3.0",
