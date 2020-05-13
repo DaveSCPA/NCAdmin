@@ -2,34 +2,37 @@ import {
   CHANGE_DIRECTION,
   CHANGE_NAVIGATION_STYLE,
   FIXED_DRAWER,
+  COLLAPSED_DRAWER,
+  MINI_DRAWER,
   HORIZONTAL_MENU_POSITION,
   INSIDE_THE_HEADER,
   SWITCH_LANGUAGE,
   TOGGLE_COLLAPSED_NAV,
   VERTICAL_NAVIGATION,
   WINDOW_WIDTH
-} from "constants/ActionTypes";
+} from 'constants/ActionTypes';
 
-const rltLocale = ["ar"];
+const rltLocale = ['ar'];
 const initialSettings = {
   navCollapsed: false,
   darkTheme: false,
-  drawerType: FIXED_DRAWER,
+  // drawerType: FIXED_DRAWER,  Original
+  drawerType: MINI_DRAWER,
   width: window.innerWidth,
   isDirectionRTL: false,
   navigationStyle: VERTICAL_NAVIGATION,
   horizontalNavPosition: INSIDE_THE_HEADER,
   locale: {
-    languageId: "english",
-    locale: "en",
-    name: "English",
-    icon: "us"
+    languageId: 'english',
+    locale: 'en',
+    name: 'English',
+    icon: 'us'
   }
 };
 
 const settings = (state = initialSettings, action) => {
   switch (action.type) {
-    case "@@router/LOCATION_CHANGE":
+    case '@@router/LOCATION_CHANGE':
       return {
         ...state,
         navCollapsed: false
